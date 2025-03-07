@@ -11,6 +11,50 @@
  * @author     Michael Kölling and David J. Barnes
  * @version    0.1 (2016.02.29)
  */
+/*
+ * /*
+ * Question 2
+ * The structure of class documentation shows which package it belongs to
+ * Constructor summary: Lists available constructors
+ * Method summary: List methods with short descriptions
+ * Method details: detailed explanations of each method
+ * Inherited methods: Methods inherited from parent classes.
+ * Other classes start with the same structure.
+ * 
+ * Question 3
+ * The first version is boolean startsWith(String prefix) and it 
+ * checks if the string starts with the given prefix
+ * 
+ * The second version is boolean startsWith(String prefix, int toffset)
+ * It verifies if the substring  starting from toffset starts with the given prefix
+ * 
+ * Question 4
+ * There is a method which is endsWith(String suffix)
+ * and its return type is type is boolean
+ * 
+ * Question 5
+ * The method in the String class is length()
+ * and it returns the number characters in a string
+ * 
+ * Question 6
+ * I found them by using JavaDocs
+ * Methods are easy to find when you know what you're looking for
+ * 
+ * Question 7
+ * Signature of the methos: public String trim()
+ * 
+ * Question 10 
+ * Return type is boolean
+ * Question 12
+ * Found in java.util package and it's used for generating random numbers
+ * 
+ * Question 13
+ * Random rand = new Random();
+ * int randomNumber = rand.nextInt(50);
+ * System.out.println(randomNumber);
+ *
+ */
+
 public class SupportSystem
 {
     private InputReader reader;

@@ -10,7 +10,7 @@ import java.util.Random;
 /*
  * Question 15
  * It will generate a random number from 0 to 99
- * if you want a number between 1 and 100, write rand.nextInt(100)+1
+ * if you want a number between 1 and 100, write random.nextInt(100)+1
  * 
  */
 
@@ -26,5 +26,9 @@ public class RandomTester
         for (int i = 0; i < howMany; i++){
             System.out.println(" new integer:"+ r.nextInt(500));
         }
+    }
+    
+    public int throwDice(){
+        return r.nextInt(6)+1;
     }
 }

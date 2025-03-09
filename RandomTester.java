@@ -13,6 +13,7 @@ import java.util.ArrayList;
  * It will generate a random number from 0 to 99
  * if you want a number between 1 and 100, write random.nextInt(100)+1
  * 
+ * 
  */
 
 public class RandomTester

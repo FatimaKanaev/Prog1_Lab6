@@ -1,4 +1,5 @@
 import java.util.Random;
+import java.util.ArrayList;
 
 /**
  * Write a description of class RandomTester here.
@@ -17,6 +18,7 @@ import java.util.Random;
 public class RandomTester
 {
     private Random r = new Random();
+    private ArrayList<String> responses;
     
     public void printOneRandom(){
         System.out.println(" new integer:"+ r.nextInt(500));
@@ -30,5 +32,12 @@ public class RandomTester
     
     public int throwDice(){
         return r.nextInt(6)+1;
+    }
+    
+    public RandomTester(){
+        responses = new ArrayList<>();
+        responses.add("yes");
+        responses.add("no");
+        responses.add("maybe");
     }
 }

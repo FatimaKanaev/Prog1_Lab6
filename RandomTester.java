@@ -40,4 +40,12 @@ public class RandomTester
         responses.add("no");
         responses.add("maybe");
     }
+    
+    public int getRandomInRange(int min,int max){
+        return r.nextInt((max-min)+1)+min;
+    }
+    
+    public int getRandom(int max){
+        return getRandomInRange(1,max);
+    }
 }

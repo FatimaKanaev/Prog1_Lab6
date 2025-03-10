@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.HashMap;
+import java.util.HashSet;
 
 /**
  * The responder class represents a response generator object.
@@ -27,11 +29,27 @@ public class Responder
      * 
      * Question 26
      * We can use the size() method to check the amount of entries in a map.
+     * 
+     * Question 34
+     * Similarities:
+     * Both store elements and allow iteration
+     * Both can be modified dynamically
+     * 
+     * Differences:
+     * HashSet doesnt allow duplicates, while ArrayLists does
+     * HashSet is unordered, while ArrayList maintains insertion order
+     * 
+     * Question 35
+     * It uses a regular expression to split a string
+     * Split by space or tab and Split by colon(:)
+     * 
     */
     
     private ArrayList<String> defaultResponses;
     private Random r;
     private String lastResponse = "";
+    private HashMap<String,String> responsesMap;
+
     /**
      * Construct a Responder - nothing to do
      */
@@ -40,6 +58,8 @@ public class Responder
         defaultResponses = new ArrayList<>();
         fillDefaultResponses();
         r = new Random();
+        responsesMap = new HashMap<>();
+        fillResponsesMap();
     }
 
     public String generateResponse()
@@ -68,4 +88,30 @@ public class Responder
         return response;
     }
     
+    private void fillResponsesMap(){
+        responsesMap.put("slow", "Try restarting your computer");
+        responsesMap.put("error", "Check for software update");
+        responsesMap.put("frozen", "no way other than reboot");
+        responsesMap.put("crash", "Your system crashed. Try reinstalling.");
+        responsesMap.put("network", "Check your router and network settings.");
+        responsesMap.put("bug","Try reinstalling the software.");
+        responsesMap.put("update","Make sure you have the latest update installed.");
+        responsesMap.put("password","Try resetting your password.");
+        responsesMap.put("wifi","Check if your Wi-FI router is working properly.");
+    }
+    
+    public String generateResponse(HashSet<String> words){
+        ArrayList<String> matchedResponses = new ArrayList<>();
+        for (String word : words){
+            String response = responsesMap.get(word);
+            if (response != null){
+                matchedResponses.add(response);
+            }
+        }
+        
+        if (!matchedResponses.isEmpty()){
+            return String.join("", matchedResponses);
+        }
+        return pickDefaultResponse();
+    }
 }

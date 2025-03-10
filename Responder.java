@@ -10,6 +10,13 @@ import java.util.Random;
  */
 public class Responder
 {
+    /*
+     *  Question 23
+     * When you add more responses to the list, the random selection will still work properly because r.nextInt(responses.size()) 
+     * always picks an index within the available range. But,if you remove all responses,it will cause an error. We can prevent this
+     * by checking the list, if it's empty, before calling r.nextInt().
+    */
+    
     private ArrayList<String> defaultResponses;
     private Random r;
     private String lastResponse = "";

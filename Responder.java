@@ -11,10 +11,22 @@ import java.util.Random;
 public class Responder
 {
     /*
-     *  Question 23
+     * Question 23
      * When you add more responses to the list, the random selection will still work properly because r.nextInt(responses.size()) 
      * always picks an index within the available range. But,if you remove all responses,it will cause an error. We can prevent this
      * by checking the list, if it's empty, before calling r.nextInt().
+     * 
+     * Question 24
+     * Hash Map in Java is a part of the java.util package and is used to 
+     * store key value pairs. A hashMap  uses a hash table to store the keys.
+     * It provides a way to store and retrieve data using unique keys
+     * 
+     * Question 25
+     * Types of methods: put, get, containsKey, containsValue, remove, entrySet,
+     * keySet, Values. I think it can be used for both of its parameters.
+     * 
+     * Question 26
+     * We can use the size() method to check the amount of entries in a map.
     */
     
     private ArrayList<String> defaultResponses;

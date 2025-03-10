@@ -17,6 +17,16 @@ public class InputReader
      * Class variables and methods (marked as static) are associated with the class itself rather than with instances. 
      * The Arrays class provides useful methods such as:
      * sort(), binarySearch(), asList(), and equals().
+     * 
+     * Question 40
+     * sort()
+     * equals()
+     * asList()
+     * fill()
+     * toString()
+     * binarySearch()
+     * copyOf()
+     * 
      */
     
     private Scanner reader;
